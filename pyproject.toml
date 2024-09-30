@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "chatbot"
+version = "0.1.0"
+description = "This is a chatbot for INDXO AI"
+authors = ["JansonAlbi <jansonalbi172002@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "rasa-pro"
+url = "https://europe-west3-python.pkg.dev/rasa-releases/rasa-pro-python/simple"
+priority = "supplemental"

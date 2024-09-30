@@ -1,0 +1,35 @@
+[
+    {
+      "input": "What alarms were raised for Machine A yesterday?",
+      "output": "SELECT * FROM Alarm_history WHERE L1Name = '{machine_name}' AND updatedate >= '{yesterday}' AND enddate <= '{today}'"
+    },
+    {
+      "input": "Show me the status of Machine B last week.",
+      "output": "SELECT status FROM L1_Pool_Opened WHERE L1Name = '{machine_name}' AND updatedate >= '{start_of_last_week}' AND enddate <= '{end_of_last_week}'"
+    },
+    {
+      "input": "How many times has Machine C raised alarms today?",
+      "output": "SELECT COUNT(*) FROM Alarm_history WHERE L1Name = '{machine_name}' AND updatedate >= '{today}'"
+    },
+    {
+      "input": "Give me the axis details of Machine D.",
+      "output": "SELECT * FROM Axis_details WHERE L1Name = '{machine_name}'"
+    },
+    {
+      "input": "What is the signal value for Machine E right now?",
+      "output": "SELECT value FROM L1SignalPool WHERE L1Name = '{machine_name}' AND updatedate >= '{current_time}'"
+    },
+    {
+      "input": "Show me all the alarms from last month for Machine F.",
+      "output": "SELECT * FROM Alarm_history WHERE L1Name = '{machine_name}' AND updatedate >= '{start_of_last_month}' AND enddate <= '{end_of_last_month}'"
+    },
+    {
+      "input": "Check if Machine G has exceeded its warning limits today.",
+      "output": "SELECT * FROM TBL_LinearLimits WHERE L1Name = '{machine_name}' AND updatedate >= '{today}' AND status = 'warning'"
+    },
+    {
+      "input": "Has Machine H crossed critical limits this week?",
+      "output": "SELECT * FROM TBL_LinearLimits WHERE L1Name = '{machine_name}' AND updatedate >= '{start_of_week}' AND enddate <= '{end_of_week}' AND status = 'critical'"
+    }
+  ]
+    
